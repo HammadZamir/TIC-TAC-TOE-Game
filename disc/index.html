@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../src/filee.js" defer></script>
+
+
+
+    <style>
+        body {
+            background-color: #1f2937;
+        }
+        .you-won {
+            color: rgb(80, 202, 202);
+        }
+        .take-round{
+            color: rgb(80, 202, 202);
+        }
+        .overlay{
+            display: none;
+        }
+        
+    </style>
+
+</head>
+
+
+
+
+
+<body class="flex items-center justify-center h-screen ">
+
+    <div class="text-center">
+        
+        <div class="text-white flex flex-row justify-between mb-5  bg-slate-300">
+            <div class="mb-4 text-xl font-bold text-gray-300">
+                <span id="player-x" class="text-cyan-400"><i class="fa fa-times" aria-hidden="true"></i></span> 
+                <span class="text-yellow-400">O</span>
+            </div>
+
+            <div class="turn-button border-none cell w-20 h-8 rounded-lg bg-gray-500 border-2 cursor-pointer">
+                <h2>  Turn</h2>
+            </div>
+
+            <div>
+                <button class="reset-button cursor-pointer bg-slate-300"> <i class="fa-solid fa-rotate"></i> </button></i>
+            </div>
+        </div>
+        
+        <div class="game grid grid-cols-3 gap-2  mx-auto">
+            <button class="box border-none cell w-20 h-20 rounded-lg bg-gray-500 border-2 cursor-pointer text-3xl text-center content-center"></button>
+            <button class="box border-none cell w-20 h-20 rounded-lg bg-gray-500 border-2 cursor-pointer text-3xl text-center content-center"></button>
+            <button class="box border-none cell w-20 h-20 rounded-lg bg-gray-500 border-2 cursor-pointer text-3xl text-center content-center"></button>
+            <button class="box border-none cell w-20 h-20 rounded-lg bg-gray-500 border-2 cursor-pointer text-3xl text-center content-center"></button>
+            <button class="box border-none cell w-20 h-20 rounded-lg bg-gray-500 border-2 cursor-pointer text-3xl text-center content-center"></button>
+            <button class="box  text-orange border-none cell w-20 h-20 rounded-lg bg-gray-500 border-2 cursor-pointer text-3xl text-center content-center"></button>
+            <button class="box border-none cell w-20 h-20 rounded-lg bg-gray-500 border-2 cursor-pointer text-3xl text-center content-center"></button>
+            <button class="box border-none cell w-20 h-20 rounded-lg bg-gray-500 border-2 cursor-pointer text-3xl text-center content-center"></button>
+            <button class="box border-none cell w-20 h-20 rounded-lg bg-gray-500 border-2 cursor-pointer text-3xl text-center content-center"></button>
+        </div>
+
+        <!-- <div class="mt-4 text-gray-300">
+            <button id="restart" class="px-4 py-2 bg-gray-700 rounded">Restart</button>
+        </div> -->
+
+        <div class="mt-8 flex flex-row justify-between text-slate-400 font-semibold" style="color: #435272;">
+            <div class="score-x border-none  text-xs  text-center items-start  w-20 h-12  rounded-lg bg-cyan-500 border-2 cursor-pointer  " style="background-color: turquoise;"><i class="fa fa-times" aria-hidden="true"></i> (YOU) <span class="text-base font-bold" id="score-x"><br>0 </span></div>
+            <div class="tie-score border-none  text-xs  text-center items-start  w-20 h-12  rounded-lg bg-gray-200 border-2 cursor-pointer  "> TIE <span class="text-base font-bold" id="score-ties"><br>0 </span></div>
+            <div class="score-o border-none  text-xs  text-center items-start  w-20 h-12  rounded-lg bg-yellow-300 border-2 cursor-pointer "><i class=" fa-regular fa-circle"></i> (CPU) <span class="text-base font-bold" id="score-o"> <br> 0</span></div>
+        </div>
+    </div>
+
+
+   
+    
+</body>
+</html>
